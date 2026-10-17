@@ -1,0 +1,385 @@
+:root {
+    --bg-color: #050505;
+    --card-bg: #121212;
+    --card-border: rgba(255, 255, 255, 0.08);
+    --text-main: #f4f4f5;
+    --text-muted: #71717a;
+    --text-desc: #a1a1aa;
+    --accent-color: #3b82f6;
+    --accent-hover: #2563eb;
+    --phone-border: #18181b;
+}
+
+@media (prefers-color-scheme: light) {
+    :root {
+        --bg-color: #f8fafc;
+        --card-bg: #ffffff;
+        --card-border: rgba(0, 0, 0, 0.08);
+        --text-main: #0f172a;
+        --text-muted: #64748b;
+        --text-desc: #334155;
+        --accent-color: #2563eb;
+        --accent-hover: #1d4ed8;
+        --phone-border: #cbd5e1;
+    }
+
+    .icon-invert-light {
+        filter: invert(1);
+    }
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 100vh;
+    margin: 0;
+    padding: 60px 20px;
+    box-sizing: border-box;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* --- Séparateurs entre les parties --- */
+.section-divider {
+    width: 100%;
+    max-width: 900px;
+    border: none;
+    height: 1px;
+    background: var(--card-border);
+    margin: 60px 0;
+}
+
+/* --- Style du Hero (En-tête) --- */
+.page-hero {
+    max-width: 800px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.page-title {
+    font-size: 3rem;
+    font-weight: 800;
+    margin: 0 0 15px 0;
+    letter-spacing: -0.02em;
+}
+
+.page-desc {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: var(--text-desc);
+    margin: 0 0 25px 0;
+}
+
+/* --- Badges des Stores --- */
+.store-badges {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.store-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 18px;
+    border-radius: 12px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-decoration: none;
+    border: 1px solid var(--card-border);
+    transition: transform 0.2s;
+}
+
+.store-badge:hover {
+    transform: translateY(-2px);
+}
+
+/* Correction de la distorsion : hauteur fixe et largeur automatique */
+.store-badge svg {
+    height: 18px;
+    width: auto;
+    fill: currentColor;
+    flex-shrink: 0;
+}
+
+.google-play {
+    background: linear-gradient(135deg, rgba(16, 185, 129, 0.15), rgba(59, 130, 246, 0.15));
+    color: #34d399;
+    border-color: rgba(52, 211, 153, 0.3);
+}
+
+.app-store {
+    background: var(--card-bg);
+    color: var(--text-muted);
+    cursor: default;
+}
+
+/* --- Titres des sections avec icône vectorielle --- */
+.section-title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.5rem;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.title-icon {
+    width: 22px;
+    height: 22px;
+    color: var(--accent-color);
+    flex-shrink: 0;
+}
+
+/* --- Conteneur Principal du Carrousel --- */
+.main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 900px;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 30px;
+    width: 100%;
+}
+
+.section-header h2 {
+    font-size: 2rem;
+    margin: 0 0 8px 0;
+    font-weight: 700;
+}
+
+.section-header p {
+    color: var(--text-desc);
+    font-size: 1rem;
+    margin: 0;
+}
+
+.carousel-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    width: 100%;
+    background: var(--card-bg);
+    padding: 40px;
+    border-radius: 24px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+    border: 1px solid var(--card-border);
+    box-sizing: border-box;
+}
+
+/* --- Style du Téléphone (Simulateur) --- */
+.phone-mockup {
+    position: relative;
+    width: 280px;
+    height: 575px;
+    background: var(--bg-color);
+    border-radius: 36px;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+    border: 10px solid var(--phone-border);
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.scroll-container {
+    width: 100%;
+    height: 100%;
+    overflow-y: scroll;
+    scrollbar-width: thin;
+    scrollbar-color: var(--accent-color) var(--bg-color);
+}
+
+.scroll-container::-webkit-scrollbar {
+    width: 5px;
+}
+.scroll-container::-webkit-scrollbar-track {
+    background: transparent;
+}
+.scroll-container::-webkit-scrollbar-thumb {
+    background-color: var(--accent-color);
+    border-radius: 10px;
+}
+
+.carousel-screen {
+    width: 100%;
+    min-height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* --- Détails et Boutons --- */
+.content-details {
+    text-align: left;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.carousel-counter {
+    font-size: 0.8rem;
+    color: var(--accent-color);
+    margin-bottom: 8px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.carousel-title-heading {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 0 0 12px 0;
+    color: var(--text-main);
+}
+
+.carousel-description {
+    font-size: 1.05rem;
+    line-height: 1.6;
+    color: var(--text-desc);
+    margin: 0 0 30px 0;
+    min-height: 80px;
+}
+
+.carousel-buttons {
+    display: flex;
+    gap: 12px;
+}
+
+button {
+    background-color: var(--accent-color);
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: background-color 0.2s, transform 0.1s;
+}
+
+button:hover:not(:disabled) {
+    background-color: var(--accent-hover);
+    transform: translateY(-1px);
+}
+
+button:disabled {
+    background-color: var(--bg-color);
+    border: 1px solid var(--card-border);
+    color: var(--text-muted);
+    cursor: not-allowed;
+    opacity: 0.5;
+}
+
+/* --- Sections Additionnelles & Stack Technique --- */
+.info-section {
+    width: 100%;
+    max-width: 900px;
+    background: var(--card-bg);
+    padding: 40px;
+    border-radius: 24px;
+    border: 1px solid var(--card-border);
+    box-sizing: border-box;
+}
+
+.info-section h3 {
+    font-size: 1.5rem;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.info-section p, .info-section ul {
+    color: var(--text-desc);
+    line-height: 1.6;
+    margin: 0 0 20px 0;
+}
+
+.info-section ul {
+    padding-left: 20px;
+}
+
+.info-section li {
+    margin-bottom: 8px;
+}
+
+/* Grille des technos uniformisée */
+.tech-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.tech-card {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: var(--bg-color);
+    padding: 12px 18px;
+    border-radius: 12px;
+    border: 1px solid var(--card-border);
+    font-weight: 600;
+    font-size: 0.95rem;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.tech-card img {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
+/* --- Footer --- */
+footer {
+    text-align: center;
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    margin-top: 20px;
+    line-height: 1.6;
+}
+
+footer a.github-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--accent-color);
+    text-decoration: none;
+    font-weight: 600;
+    vertical-align: middle;
+}
+
+footer a.github-link img {
+    width: 18px;
+    height: 18px;
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
+footer a.github-link:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .carousel-wrapper {
+        flex-direction: column;
+        padding: 20px;
+    }
+    .content-details {
+        text-align: center;
+        width: 100%;
+    }
+    .carousel-buttons {
+        justify-content: center;
+    }
+}

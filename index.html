@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cézame - Présentation</title>
+    <!-- Lien vers la feuille de style externe -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- SECTION HERO -->
+    <div class="page-hero">
+        <h1 class="page-title">Cézame</h1>
+        <p class="page-desc">
+            Cézame est une application permettant aux aidants du quotidien (particulièrement ceux en CESU) d'organiser leurs journées de travail plus efficacement sans devoir entretenir à la main leur agenda journalier. (Un abonnement est requis pour pouvoir utiliser l'application).
+        </p>
+        
+        <div class="store-badges">
+            <a href="#" class="store-badge google-play">
+                <!-- Logo Google Play propre avec viewBox correct -->
+                <svg role="img" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+                    <path fill="currentColor" d="M325.3 234.3L104.6 13l280.8 161.2-60.1 60.1zM47 0C34 6.8 25.3 19.2 25.3 35.3v441.3c0 16.1 8.7 28.5 21.7 35.3l256.6-256L47 0zm425.2 225.6l-58.9-34.1-65.7 64.5 65.7 64.5 60.1-34.1c18-14.3 18-46.5-1.2-60.8zM104.6 499l220.7-221.3 60.1 60.1L104.6 499z"/>
+                </svg>
+                Bientôt sur Google Play
+            </a>
+            <span class="store-badge app-store">
+                <!-- Logo Apple propre -->
+                <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path fill="currentColor" d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M15.97 5.39c.65-.79 1.1-1.88.98-2.97-.94.04-2.08.63-2.74 1.42-.58.68-1.1 1.77-.96 2.84 1.05.08 2.07-.5 2.72-1.29z"/>
+                </svg>
+                Version iOS prévue ultérieurement
+            </span>
+        </div>
+    </div>
+
+    <hr class="section-divider">
+
+    <!-- SECTION CARROUSEL INTERACTIF -->
+    <div class="main-container">
+        <div class="section-header">
+            <h2>Présentation</h2>
+            <p>Une découverte interactive des fonctionnalités clés de l'application (liste non exhaustive)</p>
+        </div>
+
+        <div class="carousel-wrapper">
+            <div class="phone-mockup">
+                <div class="scroll-container" id="scroll-target">
+                    <img id="carousel-img" class="carousel-screen" src="" alt="Aperçu application">
+                </div>
+            </div>
+            
+            <div class="content-details">
+                <div id="carousel-counter" class="carousel-counter"></div>
+                <h3 id="carousel-title" class="carousel-title-heading"></h3>
+                <p id="carousel-desc" class="carousel-description"></p>
+                
+                <div class="carousel-buttons">
+                    <button id="prev-btn" onclick="prevSlide()">← Précédent</button>
+                    <button id="next-btn" onclick="nextSlide()">Suivant →</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <hr class="section-divider">
+
+    <!-- SECTION 1 : FONCTIONNALITÉS CLÉS (Remplacement de l'émoji par une icône SVG) -->
+    <div class="info-section">
+        <h3 class="section-title">
+            <svg class="title-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            Points forts & Fonctionnalités
+        </h3>
+        <ul>
+            <li>Gestion centralisée des plannings journaliers et des rendez-vous.</li>
+            <li>Distinction entre une intervention ponctuelle et une relation à long terme avec un employeur.</li>
+            <li>Suivi simplifié des fiches employeurs et des contrats associés.</li>
+            <li>Tableau de bord complet pour estimer vos revenus et vos temps de travail.</li>
+            <li>Validation de vos journées et des distances parcourues, vous permettant de garder le contrôle.</li>
+            <li>Tutoriel intégré à l'application.</li>
+            <li>Paramétrage de l'application (thème, profil, préférences...).</li>
+        </ul>
+    </div>
+
+    <hr class="section-divider">
+
+    <!-- SECTION 2 : STACK TECHNIQUE (Remplacement de l'émoji par une icône SVG) -->
+    <div class="info-section">
+        <h3 class="section-title">
+            <svg class="title-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+            À propos du projet & Stack Technique
+        </h3>
+        <p>Bien que le code source de l'application demeure privé, ce projet a été conçu avec des technologies modernes et performantes pour garantir une expérience fluide et sécurisée.</p>
+        
+        <div class="tech-grid">
+            <div class="tech-card">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React Native" />
+                React Native
+            </div>
+            <div class="tech-card">
+                <img src="https://cdn.simpleicons.org/expo/ffffff" class="icon-invert-light" alt="Expo" />
+                Expo
+            </div>
+            <div class="tech-card">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" alt="TypeScript" />
+                TypeScript
+            </div>
+            <div class="tech-card">
+                <img src="https://cdn.simpleicons.org/supabase/3ECF8E" alt="Supabase" />
+                Supabase
+            </div>
+        </div>
+    </div>
+
+    <hr class="section-divider">
+
+    <!-- FOOTER -->
+    <footer>
+        <p>
+            Cézame © 2026 — Développé avec passion. <br> 
+            Retrouvez mes autres projets sur 
+            <a href="https://github.com/votre-pseudo" target="_blank" class="github-link">
+                <img src="https://cdn.simpleicons.org/github/ffffff" class="icon-invert-light" alt="GitHub" />
+                Mon profil GitHub
+            </a>
+        </p>
+    </footer>
+
+    <!-- SCRIPT DU CARROUSEL -->
+    <script>
+        const slides = [
+            {
+                img: "./assets/home.jpg",
+                title: "Écran d'accueil",
+                desc: "Retrouvez un résumé de votre journée, incluant votre planning journalier."
+            },
+            {
+                img: "./assets/agenda.jpg",
+                title: "Agenda",
+                desc: "Retrouvez ici tous vos plannings, jour par jour. Toutes les informations relatives à vos rendez-vous s'y trouvent. Vous pouvez également ajouter un rendez-vous ponctuel en cliquant sur la croix."
+            },
+            {
+                img: "./assets/employers.jpg",
+                title: "Employeurs",
+                desc: "Ajoutez et retrouvez la liste de vos employeurs d'un simple clic."
+            },
+            {
+                img: "./assets/employer_card.jpg",
+                title: "Employeurs - détails",
+                desc: "Obtenez plus d'informations sur un employeur en cliquant dessus, modifiez ou supprimez sa fiche, et gérez vos contrats directement depuis cet écran."
+            },
+            {
+                img: "./assets/dashboard.jpg",
+                title: "Tableau de bord",
+                desc: "Toutes vos statistiques en un seul endroit : temps de travail, revenus estimés et résumé de vos trajets effectués."
+            },
+            {
+                img: "./assets/validate.jpg",
+                title: "Validation",
+                desc: "À la fin de la journée, validez vos distances parcourues et corrigez-les si vous avez modifié votre journée. Cela permet à l'application de vous proposer des données les plus fidèles possible."
+            },
+            {
+                img: "./assets/tuto.jpg",
+                title: "Tutoriel",
+                desc: "Un tutoriel intégré à l'application vous permettra d'en maîtriser tous les aspects !"
+            }
+        ];
+
+        let currentIndex = 0;
+
+        const imgElement = document.getElementById("carousel-img");
+        const titleElement = document.getElementById("carousel-title");
+        const descElement = document.getElementById("carousel-desc");
+        const counterElement = document.getElementById("carousel-counter");
+        const prevBtn = document.getElementById("prev-btn");
+        const scrollTarget = document.getElementById("scroll-target");
+
+        function updateSlide() {
+            imgElement.src = slides[currentIndex].img;
+            titleElement.textContent = slides[currentIndex].title;
+            descElement.textContent = slides[currentIndex].desc;
+            counterElement.textContent = `Écran ${currentIndex + 1} sur ${slides.length}`;
+
+            scrollTarget.scrollTop = 0;
+
+            if (currentIndex === 0) {
+                prevBtn.disabled = true;
+            } else {
+                prevBtn.disabled = false;
+            }
+        }
+
+        function nextSlide() {
+            currentIndex = (currentIndex + 1) % slides.length;
+            updateSlide();
+        }
+
+        function prevSlide() {
+            if (currentIndex > 0) {
+                currentIndex--;
+                updateSlide();
+            }
+        }
+
+        updateSlide();
+    </script>
+
+</body>
+</html>
